@@ -28,7 +28,7 @@ mkdirs() {
   cecho g "Done!"
 }
 
-packages="fish fzf git git-crypt neovim openssh rsync vim wget"
+packages="fish fzf git git-crypt neovim openssh rsync termux-api vim wget"
 
 cecho g "¶ Updating default packages"
 pkg update -y
