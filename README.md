@@ -6,7 +6,7 @@
   - [Overview](#overview)
   - [Requirements](#requirements)
   - [How to Use](#how-to-use)
-    - [Method 1: Using `curl`](#method-1-using-curl)
+    - [Method 1: Using curl](#method-1-using-curl)
     - [Method 2: Using Git](#method-2-using-git)
   - [Features](#features)
 
