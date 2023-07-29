@@ -1,5 +1,15 @@
 # Termux Bootstrap
 
+## Table of Contents
+
+- [Termux Bootstrap](#termux-bootstrap)
+  - [Overview](#overview)
+  - [Requirements](#requirements)
+  - [How to Use](#how-to-use)
+    - [Method 1: Using `curl`](#method-1-using-curl)
+    - [Method 2: Using Git](#method-2-using-git)
+  - [Features](#features)
+
 ## Overview
 
 Termux Bootstrap is a lightweight script designed to streamline the setup process for Termux, a powerful terminal emulator for Android. It simplifies the initial configuration by installing essential packages, tools, and utilities, making Termux more convenient and feature-rich right from the start.
