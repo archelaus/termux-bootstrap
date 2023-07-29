@@ -24,7 +24,7 @@ checkBin() {
 }
 
 mkdirs() {
-  [[ -d $1 ]] ||mkdir -p "$1"
+  [[ -d $1 ]] || mkdir -p "$1"
   cecho g "Done!"
 }
 
