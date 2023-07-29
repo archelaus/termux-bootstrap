@@ -6,7 +6,7 @@ Termux Bootstrap is a lightweight script designed to streamline the setup proces
 
 ## Requirements
 
-- Android device with Termux installed from [F-Droid](https://f-droid.org/packages/com.termux/).
+- Android device with Termux installed from [F-Droid](https://f-droid.org/packages/com.termux/)
 - Stable internet connection to download required packages.
 
 ## How to Use
