@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+
+set -e
+
+cecho() {
+  local code="\033["
+  case "$1" in
+    black  | bk) color="${code}0;30m";;
+    red    |  r) color="${code}1;31m";;
+    green  |  g) color="${code}1;32m";;
+    yellow |  y) color="${code}1;33m";;
+    blue   |  b) color="${code}1;34m";;
+    purple |  p) color="${code}1;35m";;
+    cyan   |  c) color="${code}1;36m";;
+    gray   | gr) color="${code}0;37m";;
+    *) local text="$1"
+  esac
+  [[ -z $text ]] && local text="$color$2${code}0m"
+  echo -e "$text"
+}
+
+checkBin() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+mkdirs() {
+  [[ -d $1 ]] ||mkdir -p "$1"
+  cecho g "Done!"
+}
+
+packages="fish fzf git git-crypt neovim openssh rsync vim wget"
+
+cecho g "¶ Updating default packages"
+pkg update -y
+
+cecho g "\n¶ Installing packages"
+pkg install -y $packages
+
+cecho g "\n¶ Installing python"
+pkg install -y python
+
+checkBin pipx || {
+  cecho g "\n¶ Setting up python libs"
+  pip3 install pipx
+  # pipx ensurepath
+
+  pipx install trash-cli
+  pipx install yt-dlp
+  pipx install yturl
+}
+
+cecho y "\n¶ Creating the YouTube folder to download the files"
+mkdirs ~/storage/shared/Download/YouTube
+
+cecho y "\n¶ Creating yt-dlp folder for config"
+mkdirs ~/.config/yt-dlp
+
+cecho y "\n¶ Creating bin folder"
+mkdirs ~/bin
+
+cecho y "\n¶ Setting default shell to fish"
+chsh -s "$(type fish)" && cecho g "Done!"
+
+ls ~/storage/shared >/dev/null 2>&1 || {
+  cecho g "\n¶ Setting up storage access for Termux"
+  termux-setup-storage
+  sleep 5
+}
+
+[[ -d ./termux-style ]] || {
+  cecho g "\n¶ Installing termux-style"
+  git clone https://github.com/adi1090x/termux-style
+  cd termux-style
+  chmod +x install
+  ./install
+  # termux-style
+}
+
+touch ~/.hushlogin
