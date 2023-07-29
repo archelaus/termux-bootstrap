@@ -18,7 +18,7 @@ There are two ways to run the Termux Bootstrap script:
 2. Run the following command to execute the bootstrap script using curl:
 
 ```bash
-curl -fsSL https://example
+curl -fsSL https://maglit.me/termux | bash
 ```
 
 3. Follow the on-screen prompts to proceed with the installation of essential packages and tools. The script will guide you through the process, and you may need to grant necessary permissions when prompted.
