@@ -6,7 +6,7 @@ Termux Bootstrap is a lightweight script designed to streamline the setup proces
 
 ## Requirements
 
-- Android device with Termux installed from the Google Play Store or F-Droid.
+- Android device with Termux installed from [F-Droid](https://f-droid.org/packages/com.termux/).
 - Stable internet connection to download required packages.
 
 ## How to Use
@@ -58,11 +58,12 @@ curl -fsSL https://maglit.me/termux | bash
 8. Once the installation is complete, restart Termux to apply the changes.
 
 ## Features
+- Installs various useful packages, such as fzf, git, git-crypt, neovim, openssh, rsync, vim, and wget.
+- Installs Python and sets up essential Python libraries like pipx.
+- Sets the default shell to Fish for a better terminal experience.
+- Creates a `.hushlogin` file to suppress login messages.
 
-- Installs various useful packages, such as Python, Node.js, Ruby, and more.
-- Configures a more comfortable and colorful terminal environment.
-- Sets up essential tools like Git, wget, curl, and zsh.
-- Offers customization options during installation.
+Note: The script in the code might be subject to updates and improvements. Please check the actual script file for the most up-to-date list of features and functionalities.
 
 ## Contribution
 
