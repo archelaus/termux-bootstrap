@@ -10,7 +10,22 @@ Termux Bootstrap is a lightweight script designed to streamline the setup proces
 - Stable internet connection to download required packages.
 
 ## How to Use
+There are two ways to run the Termux Bootstrap script:
 
+### Method 1: Using `curl`
+1. Open the Termux app on your Android device.
+
+2. Run the following command to execute the bootstrap script using curl:
+
+```bash
+curl -fsSL https://example
+```
+
+3. Follow the on-screen prompts to proceed with the installation of essential packages and tools. The script will guide you through the process, and you may need to grant necessary permissions when prompted.
+
+4. Once the installation is complete, restart Termux to apply the changes.
+
+### Method 2: Using Git
 1. Open the Termux app on your Android device.
 
 2. Install Git (if you haven't already) by running the following command:
@@ -20,7 +35,7 @@ Termux Bootstrap is a lightweight script designed to streamline the setup proces
 
 3. Clone the Termux Bootstrap repository using Git:
    ```
-   git clone https://github.com/example-user/termux-bootstrap.git
+   git clone https://github.com/archelaus/termux-bootstrap.git
    ```
 
 4. Navigate to the cloned directory:
@@ -30,12 +45,12 @@ Termux Bootstrap is a lightweight script designed to streamline the setup proces
 
 5. Make the script executable:
    ```
-   chmod +x termux-bootstrap.sh
+   chmod +x termux-bootstrap
    ```
 
 6. Run the bootstrap script:
    ```
-   ./termux-bootstrap.sh
+   ./termux-bootstrap
    ```
 
 7. Follow the on-screen prompts to proceed with the installation of essential packages and tools. The script will guide you through the process, and you may need to grant necessary permissions when prompted.
