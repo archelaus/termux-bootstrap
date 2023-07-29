@@ -22,7 +22,7 @@ Termux Bootstrap is a lightweight script designed to streamline the setup proces
 ## How to Use
 There are two ways to run the Termux Bootstrap script:
 
-### Method 1: Using `curl`
+### Method 1: Using curl
 1. Open the Termux app on your Android device.
 
 2. Run the following command to execute the bootstrap script using curl:
