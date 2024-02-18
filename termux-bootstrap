@@ -4,7 +4,7 @@ set -e
 
 cecho() {
   local code="\033["
-  case "$1" in
+  case $1 in
     black  | bk) color="${code}0;30m";;
     red    |  r) color="${code}1;31m";;
     green  |  g) color="${code}1;32m";;
@@ -15,13 +15,12 @@ cecho() {
     gray   | gr) color="${code}0;37m";;
     *) local text="$1"
   esac
-  [[ -z $text ]] && local text="$color$2${code}0m"
+  [[ $text ]] || local text="$color$2${code}0m"
   echo -e "$text"
 }
 
 checkBin() {
-  command -v "$1" >/dev/null 2>&1
-}
+  command -v "$1" &>/dev/null
 
 mkdirs() {
   [[ -d $1 ]] || mkdir -p "$1"
