@@ -21,6 +21,7 @@ cecho() {
 
 checkBin() {
   command -v "$1" &>/dev/null
+}
 
 mkdirs() {
   [[ -d $1 ]] || mkdir -p "$1"
