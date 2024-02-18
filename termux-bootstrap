@@ -60,7 +60,7 @@ mkdirs ~/bin
 cecho y "\n¶ Setting default shell to fish"
 chsh -s "$(type fish)" && cecho g "Done!"
 
-ls ~/storage/shared >/dev/null 2>&1 || {
+ls ~/storage/shared &>/dev/null || {
   cecho g "\n¶ Setting up storage access for Termux"
   termux-setup-storage
   sleep 5
